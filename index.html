@@ -72,23 +72,34 @@
         <button class="popup__button popup__button-close-edit">
           <img src="./imagens/close__image.png" alt="fechamento da imagem" class="popup__close">
         </button>
-        <form class="form" >
+        <form class="form" novalidate>
           <h2 class="form__title">Editar Perfil</h2>
           <fieldset class="form__fieldset">
             <div class="form__display">
-              <input type="text" name="name" id="name" class="form__input form__input-name" placeholder="Nome"
-              minlength="2" maxlength="40"
-              required>
-              <p class="error-message"></p>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__input form__input-name"
+                placeholder="Nome"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <p class="form__error-message" id="name-error"></p>
             </div>
             <div class="form__display">
-              <input type="text" class="form__input form__input-description" id="description"
-              name="description"
-              placeholder="Sobre mim"
-              minlength="2"
-              maxlength="200"
-              required>
-              <p class="error-message"></p>
+              <input
+                type="text"
+                class="form__input form__input-description"
+                id="description"
+                name="description"
+                placeholder="Sobre mim"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <p class="form__error-message" id="description-error"></p>
             </div>
             <button class="form__button" id="button-save" type="submit">Salvar</button>
           </fieldset>
@@ -100,28 +111,32 @@
         <button class="popup__button popup__button-add">
           <img src="./imagens/close__image.png" alt="fechamento" class="popup__close-add">
         </button>
-        <form class="form form-add" >
+        <form class="form form-add" novalidate>
           <h2 class="form__title form__title-add">Novo Local</h2>
           <fieldset class="form__fieldset form__fieldset-add">
             <div class="form__display form__display-add">
-              <input type="text"
-              class="form__input form__input-name form__input-name-add"
-              id="title"
-              name="name"
-              placeholder="Titulo"
-              minlength="2"
-              maxlength="30"
-              required>
-              <p class="error-message"></p>
+              <input
+                type="text"
+                class="form__input form__input-name form__input-name-add"
+                id="title"
+                name="name"
+                placeholder="Titulo"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <p class="form__error-message" id="title-error"></p>
             </div>
             <div class="form__display">
-              <input type="url"
-              class="form__input form__input-description form__input-description-add"
-              id="url"
-              name="url"
-              placeholder="Link da imagem"
-              required>
-              <p class="error-message"></p>
+              <input
+                type="url"
+                class="form__input form__input-description form__input-description-add"
+                id="url"
+                name="url"
+                placeholder="Link da imagem"
+                required
+              />
+              <p class="form__error-message" id="url-error"></p>
             </div>
             <button class="form__button form__button-add" id="create__button"
             type="submit">
@@ -132,5 +147,6 @@
       </div>
     </div>
     <script src="./index.js"></script>
+    <script src="./validate.js"></script>
 </body>
 </html>

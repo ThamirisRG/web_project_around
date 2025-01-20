@@ -25,6 +25,8 @@ const popupImage = document.querySelector(".popup-image");
 
 const popupButtonClose = document.querySelector(".popup__button-close");
 
+const popupAdd = document.querySelector(".popup-add");
+
 // abrir o popup
 function openPopup(popup) {
   popup.classList.add("popup-opened");
@@ -162,3 +164,28 @@ function createCard(cardInfo) {
 // fecha popup de imagem
 popupButtonClose.addEventListener("click", () => closePopup(popupImage));
 
+popupImage.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("popup-opened")) {
+    closePopup(popupImage);
+  }
+});
+
+popupEdit.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("popup-opened")) {
+    closePopup(popupEdit);
+  }
+});
+
+popupAdd.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("popup-opened")) {
+    closePopup(popupAdd);
+  }
+});
+
+document.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    closePopup(popupImage);
+    closePopup(popupEdit);
+    closePopup(popupAdd);
+  }
+});
