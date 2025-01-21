@@ -22,8 +22,6 @@ O objetivo deste projeto foi implementar uma interface amigável e funcional, co
 Você pode visualizar o projeto em funcionamento através do link abaixo:  
 [GitHub Pages - Visualizar Projeto](https://thamirisrg.github.io/web_project_around/)
 
-## Como Executar Localmente
-
 
 ### Pontos Adicionados:
 1. Organização e clareza nos tópicos.
