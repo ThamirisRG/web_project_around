@@ -58,13 +58,20 @@
   opacity: 60%;
 }
 
-.cards__button{
+.cards__button-like {
   width: 21px;
   height: 19px;
   background-size: contain;
   background-color: transparent;
+  background-image: url("../imagens/image__like.png");
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
   border: none;
+}
+
+.cards__button-like_active {
+  background-image: url("../imagens/image__like_color.png");
 }
 
 .cards__button-remove{
