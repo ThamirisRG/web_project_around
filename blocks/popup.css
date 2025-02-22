@@ -26,7 +26,7 @@
 .popup__image-container {
   position: relative;
   max-width: 816px;
-  max-height: 600px;
+  max-height: 800px;
 }
 
 .popup__button {
