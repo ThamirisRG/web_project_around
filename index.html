@@ -66,6 +66,33 @@
 
       </div>
     </div>
+
+    <!--Edicao do Avatar -->
+    <div class="popup popup-avatar">
+      <div class="popup__container">
+        <button class="popup__button">
+          <img src="./imagens/close__image.png" alt="fechamento da imagem" class="popup__close">
+        </button>
+        <h2 class="popup__title">Alterar a foto do perfil</h2>
+        <form class="form" novalidate>
+          <fieldset class="form__fieldset">
+          <div class="form__display">
+            <input
+              id="avatar-link"
+              class="form__input form__input-name"
+              placeholder="Link da imagem do avatar"
+              type="url"
+              name="avatar"
+              required
+            />
+            <p class="form__error-message" id="avatar-link-error"></p>
+          </div>
+          <button type="submit"  class="form__button form__button-add">Salvar</button>
+        </fieldset>
+        </form>
+      </div>
+    </div>
+
     <div class="popup popup-edit">
       <div class="popup__container">
         <button class="popup__button popup__button-close-edit">
@@ -100,7 +127,7 @@
               />
               <p class="form__error-message" id="description-error"></p>
             </div>
-            <button class="form__button" id="button-save" type="submit">Salvar</button>
+            <button class="form__button form__button-edit" id="button-save" type="submit">Salvar</button>
           </fieldset>
         </form>
       </div>
@@ -143,6 +170,15 @@
             </button>
           </fieldset>
         </form>
+      </div>
+    </div>
+    <div class="popup popup-confirm-delete">
+      <div class="popup__container popup__container-confirm">
+        <button class="popup__button popup__button-add">
+          <img src="./imagens/close__image.png" alt="fechamento" class="popup__close-add">
+        </button>
+        <h2 class="popup__title-confirm">Tem certeza?</h2>
+        <button type="button" class="popup__save-button popup__button-confirm">Sim</button>
       </div>
     </div>
     <script type="module" src="./index.js"></script>

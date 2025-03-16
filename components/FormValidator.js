@@ -1,5 +1,5 @@
-// FormValidator.js
-export class FormValidator {
+ // FormValidate
+ export class FormValidator {
   constructor(config, formSelector) {
     this._config = config;
     this._formElement = document.querySelector(formSelector);

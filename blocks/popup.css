@@ -76,6 +76,109 @@
   left: 0;
   bottom: -25px;
 }
+/* Popup de confirmação para exclusão de cartão*/
+
+.popup-confirm-delete {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-opened {
+  display: flex;
+}
+
+.popup__container-confirm {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+}
+
+.popup__title-confirm {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.popup__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popup__button-confirm,
+.popup__button-cancel {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__button-confirm {
+  background-color: red;
+  color: white;
+}
+
+.popup__button-cancel {
+  background-color: gray;
+  color: white;
+}
+/*Popup para atualização de avatar*/
+
+.popup-avatar {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-avatar.popup-opened {
+  display: flex;
+}
+
+.popup__container-avatar {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+}
+
+.popup__input-avatar {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.popup__button-avatar {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.popup__button-avatar:hover {
+  background-color: darkblue;
+}
+
 
 @media screen and (max-width:1024px) {
   .popup__image-open {

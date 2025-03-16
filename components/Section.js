@@ -6,8 +6,12 @@ export class Section {
     this._container = document.querySelector(containerSelector);
   }
 
-  renderItems() {
-    this._items.forEach(item => this._renderer(item));
+  renderItems(items) {
+    if (!Array.isArray(items)) {
+      console.error("Erro: 'items' não é um array!", items);
+      return;
+    }
+    items.forEach(item => this._renderer(item));
   }
 
   addItem(element) {

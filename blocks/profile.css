@@ -15,7 +15,7 @@
 
 .profile__card{
   max-width: 415px;
-  height: 77px;
+  /* height: 77px; */
   top: 181px;
   left: 350px;
   border: 1px;
@@ -30,7 +30,7 @@
   max-width: 373px;
   gap: 0;
   margin: 0;
-  height: 39px;
+  /* height: 39px; */
   font-family: 'Inter' , sans-serif;
   font-weight: 500;
   font-size: 42px;
@@ -44,7 +44,7 @@
 
 .profile__description{
   max-width: 415px;
-  height: 22px;
+  /* height: 22px; */
   top: 236px;
   left: 350px;
   font-family: 'Inter' , sans-serif;
@@ -92,6 +92,32 @@
 .profile__add-bt{
   max-width: 22px;
 }
+
+/* Ajuste no hover da foto de perfil*/
+
+.profile__image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.profile__image::after {
+  content: url("../imagens/edit.icon.png"); /* Certifique-se de que o ícone está na pasta correta */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile__image:hover::after {
+  opacity: 1;
+}
+
 
 @media screen and (max-width:1024px) {
   .profile__description {
