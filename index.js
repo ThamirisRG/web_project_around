@@ -150,7 +150,7 @@ const popupAvatar = new PopupWithForm(".popup-avatar", (formData) => {
 popupAvatar.setEventListeners();
 
 // Evento para abrir popup de atualização do avatar
-const avatarButton = document.querySelector(".profile__image");
+const avatarButton = document.querySelector(".profile__image-container");
 avatarButton.addEventListener("click", () => {
   popupAvatar.open();
 });

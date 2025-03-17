@@ -17,8 +17,10 @@
             </nav>
         </header>
         <section class="profile">
-            <div>
+            <div class="profile__image-container">
                 <img src="./imagens/image_header.jpg" alt="foto de perfil" class="profile__image">
+                <div class="profile__edit-overlay"></div>
+                <div class="profile__edit-icon"></div>
             </div>
             <div class="profile__card">
                 <h2 class="profile__name">Jacques Cousteau</h2>
@@ -73,8 +75,8 @@
         <button class="popup__button">
           <img src="./imagens/close__image.png" alt="fechamento da imagem" class="popup__close">
         </button>
-        <h2 class="popup__title">Alterar a foto do perfil</h2>
         <form class="form" novalidate>
+          <h2 class="form__title">Alterar a foto do perfil</h2>
           <fieldset class="form__fieldset">
           <div class="form__display">
             <input
