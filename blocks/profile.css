@@ -13,6 +13,7 @@
   border-radius: 50%;
 }
 
+
 .profile__card{
   max-width: 415px;
   /* height: 77px; */
@@ -117,6 +118,66 @@
 .profile__image:hover::after {
   opacity: 1;
 }
+
+.profile__image-container {
+  position: relative;
+  display: inline-block;
+  width: 120px;  /* Ajuste conforme necessário */
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Efeito de escurecimento ao passar o mouse */
+.profile__image-container:hover .profile__image {
+  filter: brightness(50%);
+}
+
+/* Camada escura */
+.profile__edit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Ajusta a opacidade do escurecimento */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Torna a camada escura visível ao passar o mouse */
+.profile__image-container:hover .profile__edit-overlay {
+  opacity: 1;
+}
+
+/* Ícone de edição */
+.profile__edit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: url("../imagens/edit.icon.png") no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Torna o ícone visível ao passar o mouse */
+.profile__image-container:hover .profile__edit-icon {
+  opacity: 1;
+}
+
 
 
 @media screen and (max-width:1024px) {
