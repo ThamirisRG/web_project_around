@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Thamiris Gonçalves">
+    <meta name="description" content="around-main">
+    <meta name="Keywords" content="html,css,Javascript">
+    <title>Around</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <nav class="header__nav">
+                <img src="./imagens/logo_around.png" alt="imagem do logo">
+            </nav>
+        </header>
+        <section class="profile">
+            <div class="profile__image-container">
+                <img src="./imagens/image_header.jpg" alt="foto de perfil" class="profile__image">
+                <div class="profile__edit-overlay"></div>
+                <div class="profile__edit-icon"></div>
+            </div>
+            <div class="profile__card">
+                <h2 class="profile__name">Jacques Cousteau</h2>
+
+                <div>
+                    <button class="profile__button">
+                        <img src="./imagens/profile__botton.png" alt="botao" id="#login">
+                    </button>
+                </div>
+                <p class="profile__description">Explorador</p>
+            </div>
+            <button class="profile__add">
+                <img src="imagens/profile__add.png" alt="adicionar" class="profile__add-bt">
+            </button>
+        </section>
+        <section class="cards">
+        </section>
+        <template id="cards-template">
+          <div class="cards__container">
+              <button class="cards__button-remove">
+                  <img src="" alt="" class="cards__image">
+              </button>
+              <img src="./imagens/Trash.png" alt="delete" class="cards__delete" id="remove-image">
+              <div class="cards__container-title">
+                  <h3 class="cards__container-name"></h3>
+                  <button class="cards__button-like" type="button">
+                  </button>
+              </div>
+          </div>
+      </template>
+        <footer class="footer">
+            <p class="footer">&#169; 2024 Around The U.S.</p>
+        </footer>
+    </div>
+
+    <!-- Criação do pop-up -->
+
+    <div class="popup popup-image">
+      <div class="popup__image-container">
+        <button class="popup__button popup__button-close">
+          <img src="./imagens/close__image.png" alt="icone de fechar" class="popup__button-photo">
+        </button>
+        <img class="popup__image-open" src="" alt="">
+        <p class="popup__image-name"></p>
+
+      </div>
+    </div>
+
+    <!--Edicao do Avatar -->
+    <div class="popup popup-avatar">
+      <div class="popup__container">
+        <button class="popup__button">
+          <img src="./imagens/close__image.png" alt="fechamento da imagem" class="popup__close">
+        </button>
+        <form class="form" novalidate>
+          <h2 class="form__title">Alterar a foto do perfil</h2>
+          <fieldset class="form__fieldset">
+          <div class="form__display">
+            <input
+              id="avatar-link"
+              class="form__input form__input-name"
+              placeholder="Link da imagem do avatar"
+              type="url"
+              name="avatar"
+              required
+            />
+            <p class="form__error-message" id="avatar-link-error"></p>
+          </div>
+          <button type="submit"  class="form__button form__button-add">Salvar</button>
+        </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup-edit">
+      <div class="popup__container">
+        <button class="popup__button popup__button-close-edit">
+          <img src="./imagens/close__image.png" alt="fechamento da imagem" class="popup__close">
+        </button>
+        <form class="form" novalidate>
+          <h2 class="form__title">Editar Perfil</h2>
+          <fieldset class="form__fieldset">
+            <div class="form__display">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__input form__input-name"
+                placeholder="Nome"
+                minlength="2"
+                maxlength="40"
+                required
+              />
+              <p class="form__error-message" id="name-error"></p>
+            </div>
+            <div class="form__display">
+              <input
+                type="text"
+                class="form__input form__input-description"
+                id="description"
+                name="description"
+                placeholder="Sobre mim"
+                minlength="2"
+                maxlength="200"
+                required
+              />
+              <p class="form__error-message" id="description-error"></p>
+            </div>
+            <button class="form__button form__button-edit" id="button-save" type="submit">Salvar</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup-add">
+      <div class="popup__container popup__container-add">
+        <button class="popup__button popup__button-add">
+          <img src="./imagens/close__image.png" alt="fechamento" class="popup__close-add">
+        </button>
+        <form class="form form-add" novalidate>
+          <h2 class="form__title form__title-add">Novo Local</h2>
+          <fieldset class="form__fieldset form__fieldset-add">
+            <div class="form__display form__display-add">
+              <input
+                type="text"
+                class="form__input form__input-name form__input-name-add"
+                id="title"
+                name="name"
+                placeholder="Titulo"
+                minlength="2"
+                maxlength="30"
+                required
+              />
+              <p class="form__error-message" id="title-error"></p>
+            </div>
+            <div class="form__display">
+              <input
+                type="url"
+                class="form__input form__input-description form__input-description-add"
+                id="url"
+                name="link"
+                placeholder="Link da imagem"
+                required
+              />
+              <p class="form__error-message" id="url-error"></p>
+            </div>
+            <button class="form__button form__button-add" id="create__button"
+            type="submit">
+              Criar
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup-confirm-delete">
+      <div class="popup__container popup__container-confirm">
+        <button class="popup__button popup__button-add">
+          <img src="./imagens/close__image.png" alt="fechamento" class="popup__close-add">
+        </button>
+        <h2 class="popup__title-confirm">Tem certeza?</h2>
+        <button type="button" class="popup__save-button popup__button-confirm">Sim</button>
+      </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
