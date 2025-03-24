@@ -20,7 +20,7 @@ O objetivo deste projeto foi implementar uma interface amigável e funcional, co
 ## Demonstração
 
 Você pode visualizar o projeto em funcionamento através do link abaixo:  
-[GitHub Pages - Visualizar Projeto](https://thamirisrg.github.io/web_project_around/src)
+[GitHub Pages - Visualizar Projeto](https://thamirisrg.github.io/web_project_around/dist)
 
 
 ### Pontos Adicionados:
