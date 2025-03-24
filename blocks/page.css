@@ -1,0 +1,23 @@
+body{
+  background-color: #000000;
+}
+
+.page{
+  max-width: 1280px;
+  color: #ffffff;
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width:1024px){
+  .page{
+    padding: 0 90px 0 90px;
+  }
+}
+
+@media screen and (max-width:740) {
+  .page{
+    padding: 0 16px 0 16px;
+  }
+
+}
